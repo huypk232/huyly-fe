@@ -1,4 +1,4 @@
-import { Layout, Menu , Col , Row , Table, Button} from 'antd';
+import { Layout, Menu , Col , Row , Table, Button, Input} from 'antd';
 import {
     DeleteOutlined,  SearchOutlined
 } from '@ant-design/icons';
@@ -11,56 +11,90 @@ const ContentDashBoard = () => {
             <Button icon={<DeleteOutlined/>}></Button>
         )
     }
+    const buttonUpdateQuantity = () => {
+        return (
+            <Button icon={<DeleteOutlined/>}></Button>
+        )
+    }
     const data =[
         {
             key: '1',
+            action : <Button icon={<DeleteOutlined/>}></Button>,
             productImage: 'John',
             name: 'Strawberry',
             price: '$' +'85',
-            
+            quantity: <Input icon={<DeleteOutlined/>}></Input>,
             total:'1',
         },
         {
             key: '2',
+            action : <Button icon={<DeleteOutlined/>}></Button>,
             productImage: 'John',
             name: 'Strawberry',
             price: '$' +'85',
-            
+            quantity: <Input icon={<DeleteOutlined/>}></Input>,
             total:'1',
         },
         {
             key: '3',
+            action : <Button icon={<DeleteOutlined/>}></Button>,
             productImage: 'John',
             name: 'Strawberry',
             price: '$' +'85',
-            
+            quantity: <Input icon={<DeleteOutlined/>}></Input>,
             total:'4',
         },
         {
             key: '4',
-            action : buttonDelete,
+            action : <Button icon={<DeleteOutlined/>}></Button>,
             productImage: 'John',
             name: 'Strawberry',
             price: '$' +'85',
-            
+            quantity: <Input icon={<DeleteOutlined/>}></Input>,
             total:'4',
         }
     ]
+    const columns = [
+        {
+          title: 'Action',
+          dataIndex: 'action',
+          key: 'name',
+        },
+        {
+          title: 'Image',
+          dataIndex: 'productImage',
+          key: 'age',
+        },
+        {
+          title: 'Name',
+          dataIndex: 'name',
+          key: 'address',
+        },
+        {
+            title: 'Price',
+            dataIndex: 'price',
+            key: 'address',
+        },
+        {
+            title: 'Quantity',
+            dataIndex: 'quantity',
+            key: 'address',
+        },
+        {
+            title: 'Total',
+            dataIndex: 'total',
+            key: 'address',
+        },
+      ];
     return(
         <>
-            <Row>
-                <Col span={12}>
-                    <Table size='middle' dataSource={data}>
-                        <Column title="Action" dataIndex={"action"} key={data.key}>data.action</Column>
-                        <Column title="Product Image"></Column>
-                        <Column title="Name" dataIndex={"name"} key={data.key}>data.name</Column>
-                        <Column title="Price" dataIndex={"price"} key={data.key}>data.price</Column>
-                        <Column title="Quantity"></Column>
-                        <Column title="Total" dataIndex={"total"} key={data.key}>data.total</Column>
-                   
-                    </Table>
+            <Row justify='space-between'>
+                <Col span={10} offset={2}>
+                    <Table size='middle' dataSource={data} columns={columns} />
                 </Col>
-                <Col span={12}>Table 2</Col>
+                <Col span={8} pull={2}>
+                    <Table size='middle' dataSource={data} columns={columns} />
+                </Col>
             </Row>
         </>
     )
