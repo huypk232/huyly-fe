@@ -7,7 +7,7 @@ import HeaderDashBoard from './Header/Header';
 import ContentDashBoard from './Content/Content';
 const { Header, Footer, Sider, Content } = Layout;
 
-const Dashboard = () => {
+const Dashboard = ({children}) => {
 
   return (
     <>
@@ -20,6 +20,7 @@ const Dashboard = () => {
         </Content>
         <Footer>Footer</Footer>
       </Layout>
+      {/*{children}*/}
     </>
   );
 }

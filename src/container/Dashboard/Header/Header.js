@@ -1,9 +1,16 @@
-import { Layout, Menu , Col , Row , Image} from 'antd';
+import {Layout, Menu, Col, Row, Image, Drawer} from 'antd';
 import {
   ShoppingOutlined,  SearchOutlined
 } from '@ant-design/icons';
+import { Link,useNavigate } from 'react-router-dom';
+import "./Header.css"
 
 const HeaderDashBoard = (props) => {
+  const navigate = useNavigate()
+  const homeOnClick = () => {
+
+    navigate('/shop')
+  }
   return(
     <>
       <Row>
@@ -16,14 +23,16 @@ const HeaderDashBoard = (props) => {
         />
         </Col>
         <Col span={10} on>
-          <Menu theme="dark" mode="horizontal" >
-            <Menu.Item>Picture</Menu.Item>
-            <Menu.Item>Home</Menu.Item>
-            <Menu.Item>About</Menu.Item> 
-            <Menu.Item>Pages</Menu.Item> 
-            <Menu.Item>News</Menu.Item> 
-            <Menu.Item>Contact</Menu.Item> 
-            <Menu.Item>Shop</Menu.Item> 
+          <Menu theme="dark" mode="horizontal">
+            <Link to="/shop">
+              <Menu.Item >Test</Menu.Item>
+            </Link>
+            <Menu.Item></Menu.Item>
+            <Menu.Item>About</Menu.Item>
+            <Menu.Item>Pages</Menu.Item>
+            <Menu.Item>News</Menu.Item>
+            <Menu.Item>Contact</Menu.Item>
+            <Menu.Item>Shop</Menu.Item>
           </Menu>
         </Col>
 
