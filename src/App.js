@@ -1,29 +1,32 @@
-import logo from './logo.svg';
-import React from 'react';
+import React, {useState, useEffect } from 'react';
 import { Router, Routes, Route, Navigate, Link } from 'react-router-dom';
-import { BrowserRouter } from 'react-router-dom';
-import {Menu} from 'antd';
 
 import './App.css';
 import Dashboard from './container/Dashboard';
+
 import 'antd/dist/antd.css'
 import Shop from "./container/Dashboard/Header/shop";
+import Login from "./container/Login/Login";
 
-function Shopee() {
-    return (
-        <h1>hello</h1>
-    )
-};
+const Cart = React.lazy(() => import('./container/Dashboard/Cart'));
 
 function App() {
   return (
     <>
         <div>
-
-                    <Routes>
-                        <Route path="/" element={<Dashboard/>} />
-                        <Route  path="/shop" element={<Shop />} />
-                    </Routes>
+            <Dashboard />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/carts" element={
+                    <React.Suspense fallback={<>Loading...</>}>
+                        <Cart />
+                    </React.Suspense>}
+                />
+                <Route path="/shop" element={<Shop />} />
+                <Route path="/orders" element={<Shop />} />
+                <Route path="/users" element={<Shop />} />
+                <Route path="/login" element={<Login />} />
+            </Routes>
 
         </div>
     </>
@@ -32,8 +35,8 @@ function App() {
 
 export default App;
 
+ function Home(props) {
 
- function Home() {
      return <h2>Home</h2>;
 }
 

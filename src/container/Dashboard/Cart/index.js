@@ -4,8 +4,10 @@ import {
 } from '@ant-design/icons';
 import Column from 'antd/lib/table/Column';
 import ColumnGroup from 'antd/lib/table/ColumnGroup';
+import {useEffect, useState} from "react";
+import axios from "axios";
 
-const ContentDashBoard = () => {
+const Cart = () => {
     const buttonDelete =() => {
         return(
             <Button icon={<DeleteOutlined/>}></Button>
@@ -86,6 +88,33 @@ const ContentDashBoard = () => {
             key: 'address',
         },
       ];
+    const [cart, setCart] = useState([])
+    useEffect(() => {
+        async function getCart() {
+            try {
+                const response = await axios.get('http://127.0.0.1:5000/carts');
+                console.log(response);
+            } catch (error) {
+                console.error(error);
+            }
+        }
+        // const fetchData = async () => {
+        //     const result = await fetch("https://127.0.0.1:5000/carts", {
+        //         "method": "GET",
+        //         "headers": {
+        //             "content-type": "application/json",
+        //         },
+        //     }).then(function(response) {
+        //         console.log(result)
+        //         console.log(response)
+        //         return response.json();
+        //     });
+        //     const jsonResult = result()
+        //     setCart(jsonResult)
+        // }
+        getCart();
+    }, [])
+    // console.log(cart)
     return(
         <>
             <Row justify='space-between'>
@@ -100,4 +129,4 @@ const ContentDashBoard = () => {
     )
 }
 
-export default ContentDashBoard;
+export default Cart;

@@ -22,7 +22,7 @@ export default Shop;
 //             <div>
 //                 <Menu>
 //                     <Menu.Item>
-//                         <Link to="/">Home</Link>
+//                         <Link to="/">Home.css</Link>
 //                     </Menu.Item>
 //                     <Menu.Item>
 //                         <Link to="/about">About</Link>
@@ -37,15 +37,15 @@ export default Shop;
 //                 <Routes>
 //                     <Route path="/about" element={<About />} />
 //                     <Route path="/users" element={<Users />} />
-//                     <Route path="/" element={<Home />} />
+//                     <Route path="/" element={<Home.css />} />
 //                 </Routes>
 //             </div>
 //         </Router>
 //     );
 // }
 //
-// function Home() {
-//     return <h2>Home</h2>;
+// function Home.css() {
+//     return <h2>Home.css</h2>;
 // }
 //
 // function About() {
