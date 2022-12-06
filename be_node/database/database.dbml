@@ -1,0 +1,77 @@
+Table users {
+  id int [pk, increment] // auto-increment
+  user_name varchar [unique, not null]
+  hashed_password varchar [not null]
+  created_at timestamp
+  updated_at timestamp
+}
+
+Table vendors {
+  id int [pk, increment]
+  code varchar [unique, not null]
+  name varchar [unique, not null]
+  created_at timestamp
+  updated_at timestamp  
+}
+
+Table partners {
+  id int [pk, increment]
+  code varchar [unique, not null]
+  name varchar [unique, not null]
+  created_at timestamp
+  updated_at timestamp  
+}
+
+Table customers {
+  id int [pk, increment]
+  code varchar [unique, not null]
+  name varchar [unique, not null]
+  created_at timestamp
+  updated_at timestamp  
+}
+
+Table products {
+  id int [pk, increment]
+  code varchar [unique, not null]
+  name varchar [unique, not null]
+  created_at timestamp
+  updated_at timestamp  
+}
+
+Table orders {
+  id int [pk, increment]
+  code varchar [unique, not null]
+  created_at timestamp
+  updated_at timestamp  
+}
+
+Table order_items {
+  id int [pk, increment]
+  code varchar [unique, not null]
+  created_at timestamp
+  updated_at timestamp  
+}
+
+Table warehouses {
+  id int [pk, increment]
+  name varchar [unique, not null]
+  vendor_id int
+}
+
+
+Table products {
+  id int [pk, increment]
+  name varchar [not null]
+  code varchar [unique, not null]               //gen
+  price_id int
+  current_price int
+}
+
+Table prices {
+  id int [pk, increment]
+  level_0 int
+  level_1 int
+  level_2 int
+  level_3 int
+  level_4 int 
+}
