@@ -5,7 +5,7 @@ export default function Product() {
 	return (
 		<div id='productContainer'>
 			<div id='productImageContainer'>
-				<img id='productImage' src={this.props.product.img_url} alt='Product'/>
+				<img id='productImage' src={this.img_url} alt='Product'/>
 			</div>
 			<div id='productTitle'>
 				<p>{this.props.product.title}</p>
@@ -16,7 +16,9 @@ export default function Product() {
 			<div>
 				<button
 					id='addToCartButton'
-					onClick={() => this.props.addToCartHandler(this.props.product)}
+					onClick={() => {
+
+					}}
 				>
 					Add To Cart
 				</button>
