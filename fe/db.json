@@ -1,0 +1,82 @@
+{
+  "products": [
+    {
+      "code": "P1080",
+      "created_at": "None",
+      "id": 1,
+      "img_url": "https://musictalent.vn/wp-content/uploads/2021/07/piano-yamaha-c7x-1.jpg",
+      "name": "Piano 1080",
+      "price": 8000000,
+      "updated_at": "None"
+    },
+    {
+      "code": "XHY",
+      "created_at": "None",
+      "id": 2,
+      "img_url": "https://znews-photo.zingcdn.me/w660/Uploaded/sgorvz/2016_06_14/qua_xoai_1.jpg",
+      "name": "Mango",
+      "price": 49,
+      "updated_at": "None"
+    },
+    {
+      "code": "KP",
+      "created_at": "None",
+      "id": 3,
+      "img_url": "https://product.hstatic.net/1000351433/product/1_fd3f7a515e534801922dcc89dd0812c9.jpg",
+      "name": "Kaki pants",
+      "price": 20000,
+      "updated_at": "None"
+    },
+    {
+      "code": "LDG7",
+      "created_at": "None",
+      "id": 4,
+      "img_url": "https://phucanhcdn.com/media/product/35107_laptop_dell_gaming_g7_inspiron_7588_70183902_2.jpg",
+      "name": "Laptop Dell G7",
+      "price": 456999,
+      "updated_at": "None"
+    },
+    {
+      "code": "DT",
+      "created_at": "None",
+      "id": 5,
+      "img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzeESt8QepbdfyaG5Q28ImjBh_2ZUZALc68Q&usqp=CAU",
+      "name": "Strawberry",
+      "price": 4999,
+      "updated_at": "None"
+    },
+    {
+      "code": "LDG5",
+      "created_at": "None",
+      "id": 11,
+      "img_url": "https://tuanphong.vn/pictures/full/2020/09/1600918805-887-nang-cap-ssd-ram-cho-laptop-dell-g5-15-5500-g5500-1.jpg",
+      "name": "Laptop Dell G5",
+      "price": 427999,
+      "updated_at": "None"
+    },
+    {
+      "code": "LDG3",
+      "created_at": "None",
+      "id": 12,
+      "img_url": "https://cdn.nguyenkimmall.com/images/detailed/740/10049721-laptop-dell-g3-15-3500-i7-10750h-15-6-inch-p89f002g3500b-1.jpg",
+      "name": "Laptop Dell G3",
+      "price": 439999,
+      "updated_at": "None"
+    },
+    {
+      "code": "LHP",
+      "created_at": "None",
+      "id": 13,
+      "img_url": "https://cdn.tgdd.vn/Files/2022/07/05/1444877/co-nen-mua-laptop-hp-pavilion-goi-y-4-mau-dong-la.jpg",
+      "name": "Laptop HP",
+      "price": 359999,
+      "updated_at": "None"
+    }
+  ],
+  "carts": [
+
+  ],
+  "orders": [
+
+  ]
+}

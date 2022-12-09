@@ -11,6 +11,7 @@ import {
 import { Breadcrumb, Layout, Menu, Row, Col, theme } from 'antd';
 import ApiEndpoints from "./api/apiendpoints";
 import Product from "./components/product/productview";
+import {getList} from "./temp_server/product";
 const { Header, Content, Footer, Sider } = Layout;
 function getItem(label, key, icon, children) {
     return {
@@ -67,17 +68,18 @@ const App = () => {
     const {
         token: { colorBgContainer },
     } = theme.useToken();
-    const [products, setProducts ] = useState(null)
-
+    const [products, setProducts] = useState([]);
     useEffect(() => {
-        productsRes.then(result =>
-            setProducts(result)
-        )
-    }, []);
-    console.log(products)
-    if (products) {
-        return <div>Loading ...</div>
-    }
+        let mounted = true;
+        getList()
+            .then(items => {
+                if(mounted) {
+                    setProducts(items)
+                }
+            })
+        return () => mounted = false;
+    }, [])
+
     return (
         <Layout>
             <Header className="header">
@@ -112,11 +114,10 @@ const App = () => {
                         <Row gutter={[16, 16]} wrap={true} >
                             {
                                 products?.map(item => {
-                                    console.log(products)
                                     return (
                                         <Col span={6} key={item.id}>
                                             <div>{item.id}</div>
-                                            {/*<Product key={item.id} product={item} />*/}
+                                            <Product key={item.id} product={item} />
                                         </Col>
                                     )
                                 })
